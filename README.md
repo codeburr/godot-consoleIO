@@ -13,10 +13,10 @@ To create new commands:
       "args": [0,[0]]
 ```
 
-2- Creating a function in the Console.gd file following this syntax:
+2- Create a function in the Console.gd file following this syntax:
 ```
   func cmd_command():
-  # The command must remain the same used to create.
+  # The command must remain the same used to create, with the prefix "cmd_".
 ```
 
 Some customizations are available in the CmdInfo.gd file.
