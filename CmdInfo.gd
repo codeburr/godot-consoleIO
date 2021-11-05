@@ -8,8 +8,7 @@ const COLORS:={
 };
 const MSGS:={
 	"notValidCmd": "This command is either invalid or inexistent.",
-	"notEnoughArg": "Insufficient arguments.",
-	"wrongTypeArg": "The argument provided is of the wrong type. Requiered [color="+COLORS.VAL+"]ARG_TYPE[/color]"
+	"notEnoughArg": "Insufficient arguments."
 };
 const CMDS:={
 #	"command": {
