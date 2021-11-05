@@ -13,7 +13,7 @@ const MSGS:={
 const CMDS:={
 #	"command": {
 #		"desc": "description",
-#		"syntax": "command <requiered> [optional]",
+#		"syntax": "command <required> [optional]",
 #		"args": [0,[0]]
 #	},
 	"help": {
