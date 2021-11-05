@@ -1,6 +1,5 @@
 # godot-consoleIO
 A simple debug console for Godot Engine.
-![image](https://user-images.githubusercontent.com/86753097/140538800-7dc74afd-719f-42ac-b167-47b8ffd118f5.png)
 #
 To create new commands:
 
