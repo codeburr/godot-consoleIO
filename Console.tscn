@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ConsoleIO/Console.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.705882, 0.705882, 0.705882, 1 )
+expand_margin_top = 25.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 15.0
+content_margin_right = 15.0
+content_margin_top = 15.0
+content_margin_bottom = 15.0
+bg_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color( 0.247059, 0.247059, 0.247059, 1 )
+
+[node name="Console" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -389.0
+margin_top = -264.0
+margin_right = 391.0
+margin_bottom = 269.0
+rect_min_size = Vector2( 310, 190 )
+custom_styles/panel = SubResource( 1 )
+custom_constants/close_h_ofs = 21
+custom_constants/close_v_ofs = 21
+custom_constants/title_height = 24
+window_title = "Console"
+resizable = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="Window"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Output" type="RichTextLabel" parent="Window/VBox"]
+margin_right = 780.0
+margin_bottom = 493.0
+focus_mode = 2
+size_flags_vertical = 3
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+bbcode_enabled = true
+scroll_following = true
+selection_enabled = true
+
+[node name="Input" type="LineEdit" parent="Window/VBox"]
+margin_top = 493.0
+margin_right = 780.0
+margin_bottom = 533.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/read_only = SubResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+placeholder_text = "Type here..."
+
+[connection signal="popup_hide" from="Window" to="." method="console_hide"]
+[connection signal="text_entered" from="Window/VBox/Input" to="." method="console_input"]
