@@ -8,7 +8,7 @@ To create new commands:
 ```
   "command":
       "desc": "description",
-      "syntax": "command <requiered> [optional]",
+      "syntax": "command <required> [optional]",
       "args": [0,[0]]
 ```
 
